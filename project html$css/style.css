@@ -1,0 +1,198 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.about-ul {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 50px; /* Meel bannaan oo guud ahaan ah */
+    background-color: #f8bbd0;
+    margin-bottom: 10px;
+}
+
+.about-ul .logo {
+    font-size: 24px;
+    color: #880e4f;
+    margin: 0;
+    margin-left: 30px; /* Tani waxay "Flower" xoogaa uga soo qaadaysaa bidixda oo ay u soo jeedinaysaa gudaha */
+}
+
+.about-ul ul {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0 auto; /* Wuxuu ul-ta si toos ah ugu soo riixayaa dhinaca dhexda (center) */
+}
+
+.about-ul li {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8%;
+    background-color: #fff0f5; /* Midab fudud oo qurux badan */
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1; /* Waxay qabanaysaa qeybta bidix */
+    text-align: left;
+}
+
+.hero-text h2 {
+    color: #880e4f;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    background-color: #e8519d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-image {
+    flex: 1; /* Waxay qabanaysaa qeybta midig */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer Flex Styling */
+.footer {
+    background-color: #ee3ad0;        /* Midab madow oo muuqaal fiican leh */
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 15px;
+}
+
+.footer-contact {
+    display: flex;                /* Flexbox ku samee */
+    justify-content: center;      /* Dhexda ka keen dhammaan */
+    gap: 40px;                    /* Kala fogee Email-ka iyo Call-ka */
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.footer .copy {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 15px;
+    border-top: 1px solid #444;    /* Xariiq khafiif ah oo kala saarta */
+    padding-top: 10px;
+}
+
+
+.menu-toggle {
+    display: none; 
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN (MOBAYLADA IYO TABLET-KA)
+   ========================================== */
+
+/* Marka shaashaddu yaraato oo ay ka yaraato 768px (Mobile & Tablet) */
+
+    @media (max-width: 500px) {
+
+    /* 1. Header-ka: Logo (bidix) iyo Bars (midig) */
+    .about-ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-ul ul {
+        display: none !important; 
+    }
+
+    .about-ul .logo-container {
+        margin: 0 !important;
+        gap: 6px !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        font-size: 20px !important;
+        cursor: pointer;
+        color: #b76e79;
+    }
+
+    /* 2. Hero Section: Qoraalka iyo badhanka "Dalbo Hada" u soo jiid dhinaca bidix */
+    .hero-section {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; /* Waxay u soo jeedinaysaa dhinaca bidix */
+        text-align: left !important;       /* Qoraalka ka dhig mid bidix ka billowda */
+        padding: 20px 20px !important;
+        gap: 20px !important;
+    }
+
+    .hero-text {
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    .hero-image {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* Sawirku ha joogo dhexda ama midig */
+    }
+
+    .hero-image img {
+        width: 100% !important;
+        max-width: 310px !important; 
+        height: auto !important;
+        border-radius: 8px;
+    }
+
+    /* 3. Footer-ka: Email-ka (bidix) iyo Call-ka (midig) */
+    .footer-contact, footer {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: row !important;         /* Ka dhig jiif (Row) si ay u kala aadaan labada gees */
+        justify-content: space-between !important; /* Email bidix, Call midig */
+        align-items: center !important;
+        padding: 15px 20px !important;
+        margin-top: 30px !important;
+        text-align: left !important;
+    }
+}
